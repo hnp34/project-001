@@ -31,10 +31,18 @@ body {
     color: #000000;
     margin: 10px auto;
     max-width: 1080px;
-    background-image:url(../Users/User/Pictures/wallpaperflare.com_wallpaper.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; 
+}
+canvas { 
+    width: 300px;
+    height: 300px;
+    border: 1px solid #000000; 
+}
+label {
+    display: flex;
+    gap: 5px;
 
 }
 
