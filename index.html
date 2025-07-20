@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>yourscale</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>yourscale</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>welcome </h1>
-        <p> * this website has been prototype please report if find a bug </p>
-        <P>yourscale</P>
-        <nav>
-        </nav>
-    </header>
-    </main>
-    
-<body>
-    
-      enter the image want to upscaleing </a></li>
+  <header>
+    <h1>YourScale</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Beranda</a></li>
+        <li><a href="Kontak.html">contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <p><strong>Upscale your image easily and quickly.</strong> Upload an image below and our system will enlarge it while maintaining visual quality. This feature is currently in prototype mode.</p>
+
+    <div>
+      <label for="inputimage">Enter the image you want to upscale:</label><br>
+      <input type="file" id="inputimage" accept="image/*">
+    </div>
+
     <br>
-   <input type="file" id="inputimage" accept="image/*"></a></li>
-   <br>
-   <canvas>
-     <canvas id="canvas"></canvas>
-   </canvas>
-   <br>
-    <button id="upscalebtn"> generated </button>
+    <canvas id="canvas"></canvas>
+    <br>
 
-        <label>      
-        <input type="checkbox"  /></a>
-        <a href="privacy-policy.html">privacy policy </a>
-        </label>
-      </li>
-    <body>
-        <footer>
-            <p>&copy; last update  7-7-25</p>
+    <div>
+      <button id="upscalebtn">Generated</button>
+      <label>
+        <input type="checkbox">
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </label>
+    </div>
+  </main>
 
-        </footer>
-        
-<script src="script.js"></script> 
-    </body>
+  <div id="loadingPopup" class="popup">Upscaling... Mohon tunggu</div>
+
+  <footer>
+    <p>&copy; Last update 20-7-25</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>

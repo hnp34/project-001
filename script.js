@@ -1,4 +1,3 @@
-
 const input = document.getElementById('inputimage');
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
@@ -27,17 +26,24 @@ button.addEventListener('click', function () {
     return;
   }
 
-  const scale = 2;
-  canvas.width = loadedImage.width * scale;
-  canvas.height = loadedImage.height * scale;
+  const loadingPopup = document.getElementById('loadingPopup');
+  loadingPopup.style.display = 'block';
 
-  ctx.imageSmoothingEnabled = true;
-  ctx.imageSmoothingQuality = 'high';
-  ctx.drawImage(loadedImage, 0, 0, canvas.width, canvas.height);
+  setTimeout(() => {
+    const scale = 2;
+    canvas.width = loadedImage.width * scale;
+    canvas.height = loadedImage.height * scale;
 
-  // Otomatis download hasil upscale
-  const link = document.createElement('a');
-  link.download = 'upscaled-image.png';
-  link.href = canvas.toDataURL();
-  link.click();
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
+    ctx.drawImage(loadedImage, 0, 0, canvas.width, canvas.height);
+
+    // Otomatis download hasil upscale
+    const link = document.createElement('a');
+    link.download = 'upscaled-image.png';
+    link.href = canvas.toDataURL();
+    link.click();
+
+    loadingPopup.style.display = 'none';
+  }, 100);
 });
