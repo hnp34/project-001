@@ -22,7 +22,7 @@ input.addEventListener('change', function (e) {
 
 button.addEventListener('click', function () {
   if (!loadedImage) {
-    alert("Silakan pilih gambar terlebih dahulu.");
+    alert("select the image.");
     return;
   }
 
